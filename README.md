@@ -1,6 +1,8 @@
 Description
 ===========
 
+[![Join the chat at https://gitter.im/redguide/locales](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/redguide/locales?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This cookbook configures the available and default locales on a debian-like-system.
 It also includes a LWRP for easy use in other cookbooks.
 
