@@ -1,6 +1,5 @@
 include ::ChefLocales::Helper
 
-# Support whyrun
 
 action :add do
   new_resource.locales.each do |locale|
