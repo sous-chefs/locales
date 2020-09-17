@@ -1,17 +1,14 @@
 include ::ChefLocales::Helper
 
 # Support whyrun
-def whyrun_supported?
-  true
-end
 
 action :add do
   new_resource.locales.each do |locale|
     locale = "#{locale}.#{new_resource.charmap}"
     if locale_available?(locale) || locale == 'C'
-      Chef::Log.debug "#{ locale } already available - nothing to do."
+      Chef::Log.debug "#{locale} already available - nothing to do."
     else
-      converge_by("Add #{ locale }") do
+      converge_by("Add #{locale}") do
         add_locale(locale)
       end
     end
@@ -27,7 +24,7 @@ action :set do
     action :add
   end
 
-  converge_by("Set locale to #{ new_resource.locales }") do
+  converge_by("Set locale to #{new_resource.locales}") do
     env_variables = %w(LANG LANGUAGE)
     env_variables << 'LC_ALL' if new_resource.lc_all
 
@@ -82,12 +79,12 @@ def add_locale(locale)
       file.insert_line_if_no_match(/^#{line}$/, line)
       file.write_file
     end
-    notifies :run, 'execute[locale-gen]', :immediate
+    notifies :run, 'execute[locale-gen]', :immediately
   end
 end
 
 def update_locale(variable, locale)
   cmd = "update-locale #{variable}=#{high_locale(locale)}"
-  Mixlib::ShellOut.new(cmd).run_command
+  shell_out(cmd)
   ENV[variable] = locale
 end
