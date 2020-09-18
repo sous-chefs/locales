@@ -1,14 +1,18 @@
 ---
 driver:
-#  name: docker
   name: vagrant
 
 provisioner:
   name: chef_zero
+  deprecations_as_errors: true
 
 platforms:
-  - name: ubuntu-12.04
-  - name: debian-7.2.0
+  - name: centos-7
+  - name: centos-8
+  - name: debian-9
+  - name: debian-10
+  - name: ubuntu-18.04
+  - name: ubuntu-20.04
 
 suites:
   - name: default

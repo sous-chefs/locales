@@ -1,5 +1,5 @@
-Description
-===========
+# Description
+
 [![Build Status](https://travis-ci.org/redguide/locales.svg)](https://travis-ci.org/redguide/locales)
 
 [![Join the chat at https://gitter.im/redguide/locales](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/redguide/locales?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -7,23 +7,19 @@ Description
 This cookbook configures the available and default locales on a debian-like-system.
 It also includes a LWRP for easy use in other cookbooks.
 
-Limitation
-==========
+## Limitation
 
 Right now the cookbook *only works with UTF-8 locales*.
 
-Requirements
-============
+## Requirements
 
 None
 
-Attributes
-==========
+## Attributes
 
-* `node[:locales][:default]` -- the default locale to be installed. Defaults to "en_US.utf8".
+* `node['locales']['default']` -- the default locale to be installed. Defaults to "en_US.utf8".
 
-Usage
-=====
+## Usage
 
 Either use the node-attributes or the included LWRP "locales".
 
@@ -45,27 +41,27 @@ locales "ru_RU.utf8" do
 end
 ```
 
-License and Author
-==================
+## Contributors
 
-Author: Philipp Bergsmann (<p.bergsmann@opendo.at>)
+This project exists thanks to all the people who [contribute.](https://opencollective.com/sous-chefs/contributors.svg?width=890&button=false)
 
-Thanks for the contributions by:
-* Guilhem Lettron
-* Barthélemy Vessemont
-* Ed Bosher
-* Christian Rodriguez
+### Backers
 
-Copyright: 2013 opendo GmbH (http://opendo.at)
+Thank you to all our backers!
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+![https://opencollective.com/sous-chefs#backers](https://opencollective.com/sous-chefs/backers.svg?width=600&avatarHeight=40)
 
-    http://www.apache.org/licenses/LICENSE-2.0
+### Sponsors
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
+
+![https://opencollective.com/sous-chefs/sponsor/0/website](https://opencollective.com/sous-chefs/sponsor/0/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/1/website](https://opencollective.com/sous-chefs/sponsor/1/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/2/website](https://opencollective.com/sous-chefs/sponsor/2/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/3/website](https://opencollective.com/sous-chefs/sponsor/3/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/4/website](https://opencollective.com/sous-chefs/sponsor/4/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/5/website](https://opencollective.com/sous-chefs/sponsor/5/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/6/website](https://opencollective.com/sous-chefs/sponsor/6/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/7/website](https://opencollective.com/sous-chefs/sponsor/7/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/8/website](https://opencollective.com/sous-chefs/sponsor/8/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/9/website](https://opencollective.com/sous-chefs/sponsor/9/avatar.svg?avatarHeight=100)
