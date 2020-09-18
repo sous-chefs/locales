@@ -1,9 +1,8 @@
 name 'locales'
 maintainer 'opendo GmbH'
 maintainer_email 'p.bergsmann@opendo.at'
-license 'apache2'
+license 'Apache-2.0'
 description 'Installs/Configures locales'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/redguide/locales'
 issues_url 'https://github.com/redguide/locales/issues'
 version '0.4.0'
