@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.3 - *2022-02-08*
 
 - Remove delivery folder
 
