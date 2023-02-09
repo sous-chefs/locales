@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add unified_mode true to default resource, this was raised by cookstyle as a chef18 deprecation
+
 ## 0.4.3 - *2022-02-08*
 
 - Remove delivery folder
