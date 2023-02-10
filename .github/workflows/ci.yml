@@ -25,8 +25,6 @@ jobs:
         os:
           - 'debian-9'
           - 'debian-10'
-          - 'centos-7'
-          - 'centos-stream-8'
           - 'ubuntu-1804'
           - 'ubuntu-2004'
         suite:
