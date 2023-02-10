@@ -46,9 +46,9 @@ jobs:
           - "ubuntu-1804"
           - "ubuntu-2004"
         suite:
-          - "default"
-          - "deAT-utf8"
-          - "multiple"
+          - 'default'
+          - 'deat-utf8'
+          - 'multiple'
       fail-fast: false
 
     steps:
