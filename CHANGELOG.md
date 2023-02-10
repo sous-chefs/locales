@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-- Add unified_mode true to default resource, this was raised by cookstyle as a chef18 deprecation
+- Add unified_mode true to the default resource, for Chef 18 compatibility
+- Add execute[locale-gen] to the default provider add_locale function to allow notify to work again
+- Update serverspecs for v2+
 
 ## 0.4.3 - *2022-02-08*
 
