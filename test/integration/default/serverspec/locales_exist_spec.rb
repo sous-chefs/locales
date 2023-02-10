@@ -1,16 +1,9 @@
 require 'serverspec'
 
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+set :backend, :exec
+set :path, '/sbin:/usr/sbin:$PATH'
 
-RSpec.configure do |c|
-  c.before :all do
-    c.path = '/sbin:/usr/sbin'
-  end
-end
-
-describe 'Locales' do
-  it 'installs the default locale en_US.utf8' do
-    expect(command('locale -a | grep en_US.utf8')).to return_stdout('en_US.utf8')
-  end
+describe command('locale -a | grep en_US.utf8') do
+  # installs the default locale en_US.utf8
+  its(:stdout) { should match 'en_US.utf8' }
 end

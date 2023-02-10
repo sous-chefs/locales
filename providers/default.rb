@@ -85,7 +85,6 @@ def add_locale(locale)
   execute 'locale-gen' do
     action :nothing
   end
-
 end
 
 def update_locale(variable, locale)
