@@ -6,6 +6,10 @@
 - Add execute[locale-gen] to the default provider add_locale function to allow notify to work again
 - Update serverspecs for v2+
 
+## 0.4.5 - *2023-02-14*
+
+## 0.4.4 - *2023-02-14*
+
 ## 0.4.3 - *2022-02-08*
 
 - Remove delivery folder
