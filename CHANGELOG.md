@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.4.4 - *2023-02-14*
+
 ## 0.4.3 - *2022-02-08*
 
 - Remove delivery folder
