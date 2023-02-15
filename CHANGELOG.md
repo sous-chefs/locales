@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.0 - *2023-02-15*
 
 - Add unified_mode true to the default resource, for Chef 18 compatibility
 - Add execute[locale-gen] to the default provider add_locale function to allow notify to work again
