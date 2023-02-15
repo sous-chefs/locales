@@ -1,5 +1,7 @@
 # Changelog
 
+## Unreleased
+
 ## 1.0.0 - *2023-02-15*
 
 - Add unified_mode true to the default resource, for Chef 18 compatibility
