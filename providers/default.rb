@@ -81,6 +81,10 @@ def add_locale(locale)
     end
     notifies :run, 'execute[locale-gen]', :immediately
   end
+
+  execute 'locale-gen' do
+    action :nothing
+  end
 end
 
 def update_locale(variable, locale)

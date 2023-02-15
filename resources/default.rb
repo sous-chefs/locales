@@ -1,5 +1,7 @@
 actions :add, :set
 
+unified_mode true
+
 default_action :add
 
 attribute :locales, kind_of: [String, Array], name_attribute: true

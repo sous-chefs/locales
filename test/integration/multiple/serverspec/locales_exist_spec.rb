@@ -1,24 +1,19 @@
 require 'serverspec'
 
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+set :backend, :exec
+set :path, '/sbin:/usr/sbin:$PATH'
 
-RSpec.configure do |c|
-  c.before :all do
-    c.path = '/sbin:/usr/sbin'
-  end
+describe command('locale -a | grep fr_FR.utf8') do
+  # installs the expected locale fr_FR.utf8
+  its(:stdout) { should match 'fr_FR.utf8' }
 end
 
-describe 'Locales' do
-  it 'installs the expected locale fr_FR.utf8' do
-    expect(command('locale -a | grep fr_FR.utf8')).to return_stdout('fr_FR.utf8')
-  end
+describe command('locale -a | grep fr_BE.utf8') do
+  # installs the expected locale fr_BE.utf8
+  its(:stdout) { should match 'fr_BE.utf8' }
+end
 
-  it 'installs the expected locale fr_BE.utf8' do
-    expect(command('locale -a | grep fr_BE.utf8')).to return_stdout('fr_BE.utf8')
-  end
-
-  it 'installs the expected locale fr_CA.utf8' do
-    expect(command('locale -a | grep fr_CA.utf8')).to return_stdout('fr_CA.utf8')
-  end
+describe command('locale -a | grep fr_CA.utf8') do
+  # installs the expected locale fr_CA.utf8
+  its(:stdout) { should match 'fr_CA.utf8' }
 end
