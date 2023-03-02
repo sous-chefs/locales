@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Standardise files with files in sous-chefs/repo-management
+
 ## 1.0.0 - *2023-02-15*
 
 - Add unified_mode true to the default resource, for Chef 18 compatibility
@@ -10,7 +12,11 @@
 
 ## 0.4.5 - *2023-02-14*
 
+- Standardise files with files in sous-chefs/repo-management
+
 ## 0.4.4 - *2023-02-14*
+
+- Standardise files with files in sous-chefs/repo-management
 
 ## 0.4.3 - *2022-02-08*
 
