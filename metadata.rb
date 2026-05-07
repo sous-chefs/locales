@@ -8,7 +8,7 @@ description       'Provides a custom resource for generating and configuring sys
 source_url        'https://github.com/sous-chefs/locales'
 issues_url        'https://github.com/sous-chefs/locales/issues'
 chef_version      '>= 15.3'
-version           '1.0.11'
+version           '2.0.0'
 
 supports 'debian', '>= 12.0'
 supports 'ubuntu', '>= 22.04'
