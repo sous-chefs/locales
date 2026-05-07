@@ -62,7 +62,7 @@ end
 
 action :set do
   locale = new_resource.default_locale || begin
-    raise Chef::Exceptions::ValidationFailed, 'Set exactly one locale or provide default_locale' unless new_resource.locales.count == 1
+    raise Chef::Exceptions::ValidationFailed, 'Set exactly one locale or provide default_locale' unless new_resource.locales.one?
 
     new_resource.locales.first
   end
