@@ -23,13 +23,12 @@ jobs:
     strategy:
       matrix:
         os:
-          - "debian-9"
-          - "debian-10"
-          - "ubuntu-1804"
-          - "ubuntu-2004"
+          - "debian-12"
+          - "ubuntu-2204"
+          - "ubuntu-2404"
         suite:
           - "default"
-          - "deat-utf8"
+          - "de-at-utf8"
           - "multiple"
       fail-fast: false
 
@@ -37,7 +36,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v6
       - name: Install Chef
-        uses: actionshub/chef-install@6.0.0
+        uses: sous-chefs/.github/.github/actions/install-workstation@6.0.0
       - name: Dokken
         uses: actionshub/test-kitchen@3.0.0
         env:

@@ -1,0 +1,7 @@
+---
+name: de_at_utf8
+title: de_AT Locale Tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies single locale generation
+version: 1.0.0

@@ -1,0 +1,7 @@
+---
+name: default
+title: Default Locale Tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies the default locale workflow
+version: 1.0.0

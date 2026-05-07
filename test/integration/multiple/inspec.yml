@@ -1,0 +1,7 @@
+---
+name: multiple
+title: Multiple Locale Tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies multiple locale generation
+version: 1.0.0

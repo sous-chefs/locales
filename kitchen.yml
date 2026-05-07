@@ -3,27 +3,49 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_infra
+  product_name: chef
+  product_version: latest
+  channel: stable
+  chef_license: accept
+  enforce_idempotency: true
+  multiple_converge: 2
   deprecations_as_errors: true
 
+verifier:
+  name: inspec
+
 platforms:
-  - name: debian-9
-  - name: debian-10
-  - name: ubuntu-18.04
-  - name: ubuntu-20.04
+  - name: debian-12
+  - name: ubuntu-22.04
+  - name: ubuntu-24.04
+
+x-run_lists:
+  default: &default_run_list
+    - recipe[test::default]
+  de_at_utf8: &de_at_utf8_run_list
+    - recipe[test::de_at_utf8]
+  multiple: &multiple_run_list
+    - recipe[test::multiple]
+
+x-verifiers:
+  default: &default_verifier
+    inspec_tests:
+      - path: test/integration/default
+  de_at_utf8: &de_at_utf8_verifier
+    inspec_tests:
+      - path: test/integration/de_at_utf8
+  multiple: &multiple_verifier
+    inspec_tests:
+      - path: test/integration/multiple
 
 suites:
   - name: default
-    run_list:
-      - recipe[locales::default]
-    attributes:
-  - name: deat_utf8
-    run_list:
-      - recipe[locales::default]
-      - recipe[fake::deat_utf8]
-    attributes:
+    run_list: *default_run_list
+    verifier: *default_verifier
+  - name: de-at-utf8
+    run_list: *de_at_utf8_run_list
+    verifier: *de_at_utf8_verifier
   - name: multiple
-    run_list:
-      - recipe[locales::default]
-      - recipe[fake::multiple]
-    attributes:
+    run_list: *multiple_run_list
+    verifier: *multiple_verifier

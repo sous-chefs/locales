@@ -4,42 +4,48 @@
 
 [![Join the chat at https://gitter.im/redguide/locales](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/redguide/locales?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This cookbook configures the available and default locales on a debian-like-system.
-It also includes a LWRP for easy use in other cookbooks.
+This cookbook provides a custom resource for configuring available and default locales on Debian-like systems.
 
 ## Limitation
 
 Right now the cookbook *only works with UTF-8 locales*.
 
+See [LIMITATIONS.md](LIMITATIONS.md) for supported platforms and package constraints.
+
 ## Requirements
 
 None
 
-## Attributes
+## Migration
 
-* `node['locales']['default']` -- the default locale to be installed. Defaults to "en_US.utf8".
+This cookbook no longer ships recipes or node attributes. See [migration.md](migration.md) for the
+breaking changes and resource-based replacements.
 
 ## Usage
 
-Either use the node-attributes or the included LWRP "locales".
+Use the `locales` custom resource.
 
 ```ruby
-locales "de_AT.utf8" do
+locales 'de_AT' do
   action :add
 end
 ```
 
 ```ruby
-locales "Add locales" do
-  locales ["fr_FR.utf8", "fr_BE.utf8", "fr_CA.utf8"]
+locales 'add locales' do
+  locales %w(fr_FR fr_BE fr_CA)
 end
 ```
 
 ```ruby
-locales "ru_RU.utf8" do
+locales 'ru_RU' do
   action :set
 end
 ```
+
+## Resources
+
+* [locales](documentation/locales_locales.md)
 
 ## Contributors
 
