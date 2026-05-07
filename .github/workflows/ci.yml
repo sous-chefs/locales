@@ -11,11 +11,9 @@ jobs:
   lint-unit:
     uses: sous-chefs/.github/.github/workflows/lint-unit.yml@6.0.0
     permissions:
-      actions: write
       checks: write
       pull-requests: write
       statuses: write
-      issues: write
 
   integration:
     needs: "lint-unit"
