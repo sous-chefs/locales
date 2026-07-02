@@ -44,8 +44,10 @@ suites:
     run_list: *default_run_list
     verifier: *default_verifier
   - name: de-at-utf8
-    run_list: *de_at_utf8_run_list
+    provisioner:
+      named_run_list: de_at_utf8
     verifier: *de_at_utf8_verifier
   - name: multiple
-    run_list: *multiple_run_list
+    provisioner:
+      named_run_list: multiple
     verifier: *multiple_verifier
